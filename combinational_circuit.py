@@ -25,6 +25,8 @@ class Bit(object):
     def __or__(self, other):
         # a|b = ~(~a & ~b) = ~(~(~a nand ~b)) = ~a nand ~b
         return nand(~self, ~other)
+    def __xor__(self, other):
+        return nand((~(self & ~other)), (~(other & ~self)))
 
 def nand(x, y):
     c = count.next()

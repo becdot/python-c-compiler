@@ -1,5 +1,5 @@
 #!/bin/sh
-# Produce test outputs for ex1.py, given inputs in ex1.test-input;
+# Produce test outputs for ex[i].py, given inputs in ex[i].test-input;
 # then make sure they're the same as expected.
 # This is our top-level test script.
 
