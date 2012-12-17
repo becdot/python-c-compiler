@@ -4,9 +4,9 @@ static int v[2];
 static int out[1];
 
 int eval(void) {
-int x0 = !(v[0] & v[1]);
-int x1 = !(x0 & x0);
-out[0] = x1;
+  int x0 = !(v[0] & v[1]);
+  int x1 = !(x0 & x0);
+  out[0] = x1;
 }
 
 int main() {
