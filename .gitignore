@@ -1,1 +1,16 @@
 *.pyc
+*.expected-output
+*.test-input
+*.test-output
+ex1
+ex1.c
+ex2
+ex2.c
+ex3
+ex3.c
+ex4
+ex4.c
+mux
+mux.c
+dmux
+dmux.c
