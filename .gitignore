@@ -14,3 +14,5 @@ mux
 mux.c
 dmux
 dmux.c
+byte_and
+byte_and.c

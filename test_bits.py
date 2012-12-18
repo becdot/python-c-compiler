@@ -73,5 +73,5 @@ def dmux():
     write_test('dmux', inputs, outputs)
     bit_dmux(a, s)
 
-func_dict = {'ex1': ex1, 'ex2': ex2, 'ex3': ex3, 'ex4': ex4, 'mux': mux, 'dmux': dmux}
-func_dict[sys.argv[1]]()
+test_dict = {'ex1': ex1, 'ex2': ex2, 'ex3': ex3, 'ex4': ex4, 'mux': mux, 'dmux': dmux}
+test_dict[sys.argv[1]]()

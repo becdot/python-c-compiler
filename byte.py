@@ -18,14 +18,3 @@ class Byte(object):
         return [~bit for bit in self.bits]
     def __and__(self, other):
         return [(bit1 & bit2) for bit1, bit2 in zip(self, other)]
-
-
-a = Bit()
-b = Bit()
-c = Bit()
-d = Bit()
-
-m1 = Byte([a, b, a, b])
-m2 = Byte([d, b, a, c])
-
-compile_program(m1 & m2)
