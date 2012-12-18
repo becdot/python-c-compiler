@@ -63,3 +63,13 @@ def compile_program(output_bits):
     print '    printf("\\n");'
     print '  }'
     print '}'
+
+def write_test(testname, inputs, outputs):
+    with open('{}.test-input'.format(testname), 'w') as infile, open('{}.expected-output'.format(testname), 'w') as expectfile, \
+         open('{}.test-output'.format(testname), 'w') as outfile:
+        infile.write(inputs)
+        expectfile.write(outputs)
+        outfile.write('')
+    infile.close()
+    expectfile.close()
+    outfile.close()
