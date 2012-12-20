@@ -4,5 +4,5 @@
 #!/bin/bash
 for test in ex1 ex2 ex3 ex4 mux dmux
 do
-./ex_test_bits.sh $test
+./$1 $test
 done

@@ -4,5 +4,5 @@
 #!/bin/bash
 for test in byte_and
 do
-./ex_test_bytes.sh $test
+./ex.test_bytes.sh $test
 done

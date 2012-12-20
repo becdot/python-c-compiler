@@ -21,10 +21,18 @@ def ex1():
     x = ~a & (b | c)
     y = nand(b, x)
 
-    ex1inputs = """0 0 0\n0 0 1\n0 1 0\n0 1 1\n1 0 0\n1 0 1\n1 1 0\n1 1 1\n"""
-    ex1outputs = """ 0 1\n 1 1\n 1 0\n 1 0\n 0 1\n 0 1\n 0 1\n 0 1\n"""
-    write_test('ex1', ex1inputs, ex1outputs)
-
+    test_values = """\
+000 01
+001 11
+010 10
+011 10
+100 01
+101 01
+110 01
+111 01"""
+    inputs = '\n'.join(' '.join(line.split(' ')[0]) for line in test_values.splitlines())
+    outputs = ''.join(' ' + out + '\n' for out in (' '.join(line.split(' ')[1]) for line in test_values.splitlines()))
+    write_test('ex1', inputs, outputs)
     compile_program([x, y])
 
 def ex2():
