@@ -10,10 +10,25 @@ def byte_and():
 
     m1 = Byte([a, b, a, b])
     m2 = Byte([d, b, a, c])
-    inputs = "0 0 0 0\n0 0 0 1\n0 0 1 0\n0 0 1 1\n0 1 0 0\n0 1 0 1\n0 1 1 0\n0 1 1 1\n1 0 0 0\n\
-1 0 0 1\n1 0 1 0\n1 0 1 1\n1 1 0 0\n1 1 0 1\n1 1 1 0\n1 1 1 1"
-    outputs = " 0 0 0 0\n 0 0 0 0\n 0 0 0 0\n 0 0 0 0\n 0 1 0 0\n 0 1 0 0\n 0 1 0 1\n 0 1 0 1\n\
- 0 0 1 0\n 1 0 1 0\n 0 0 1 0\n 1 0 1 0\n 0 1 1 0\n 1 1 1 0\n 0 1 1 1\n 1 1 1 1\n"
+    test_values = """\
+0000 0000
+0001 0000
+0010 0000
+0011 0000
+0100 0100
+0101 0100
+0110 0101
+0111 0101
+1000 0010
+1001 1010
+1010 0010
+1011 1010
+1100 0110
+1101 1110
+1110 0111
+1111 1111"""
+    inputs = '\n'.join(' '.join(line.split(' ')[0]) for line in test_values.splitlines())
+    outputs = ''.join(' ' + out + '\n' for out in (' '.join(line.split(' ')[1]) for line in test_values.splitlines()))
     write_test("byte_and", inputs, outputs)
     compile_program(m1 & m2)
 
